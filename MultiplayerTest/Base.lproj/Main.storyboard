@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Arial Rounded Bold.ttf">
+            <string>ArialRoundedMTBold</string>
+            <string>ArialRoundedMTBold</string>
+            <string>ArialRoundedMTBold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MultiplayerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-boxingring" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-Xp-LeU">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for opponents..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1hQ-rB-fG0">
+                                <rect key="frame" x="36" y="41" width="248" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="q83-pA-Ag0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LIv-s9-RI9">
+                                <rect key="frame" x="176" y="203" width="48" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Iy3-rY-j5Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBE-EX-kO0" customClass="AvatarView" customModule="MultiplayerTest" customModuleProvider="target">
+                                <rect key="frame" x="36" y="175" width="90" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="QUS-aR-uXR"/>
+                                    <constraint firstAttribute="width" secondItem="yBE-EX-kO0" secondAttribute="height" multiplier="1:1" id="bYG-ye-dKo"/>
+                                    <constraint firstAttribute="height" constant="90" id="kOg-y7-jXd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="empty"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80M-32-2WK">
+                                <rect key="frame" x="16" y="482" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="igm-uK-Y5h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="29"/>
+                                <size key="titleShadowOffset" width="3" height="1"/>
+                                <state key="normal" title="Search Again">
+                                    <color key="titleColor" red="0.98853612724453632" green="1" blue="0.1035909190620441" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.5356770833333333" green="0.51064615476919484" blue="0.50653692729512001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionSearchAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="MeT-6t-VCx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azP-qu-igE" customClass="AvatarView" customModule="MultiplayerTest" customModuleProvider="target">
+                                <rect key="frame" x="194" y="175" width="90" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="QO6-jZ-uNt"/>
+                                    <constraint firstAttribute="height" constant="90" id="egl-Dn-9Iy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="avatar-1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="name" value="Me"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eqm-Xp-LeU" secondAttribute="bottom" id="3gF-He-WM8"/>
+                            <constraint firstItem="LIv-s9-RI9" firstAttribute="centerY" secondItem="azP-qu-igE" secondAttribute="centerY" id="8dO-FU-hdp"/>
+                            <constraint firstItem="1hQ-rB-fG0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="At6-0z-7aP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="80M-32-2WK" secondAttribute="bottom" constant="36" id="DuN-aj-dp2"/>
+                            <constraint firstItem="yBE-EX-kO0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Fhs-pA-eES"/>
+                            <constraint firstItem="azP-qu-igE" firstAttribute="centerY" secondItem="yBE-EX-kO0" secondAttribute="centerY" id="GBo-wq-Dwv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1hQ-rB-fG0" secondAttribute="trailing" constant="20" id="PAd-7o-dNh"/>
+                            <constraint firstItem="azP-qu-igE" firstAttribute="top" secondItem="1hQ-rB-fG0" secondAttribute="bottom" constant="72" id="Pyq-ZF-vbw"/>
+                            <constraint firstItem="LIv-s9-RI9" firstAttribute="leading" secondItem="yBE-EX-kO0" secondAttribute="trailing" constant="50" id="TGQ-Rk-arO"/>
+                            <constraint firstItem="eqm-Xp-LeU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="X8o-Kb-nCs"/>
+                            <constraint firstItem="1hQ-rB-fG0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="YLA-n7-2Ij"/>
+                            <constraint firstItem="80M-32-2WK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cVt-q0-maQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="80M-32-2WK" secondAttribute="trailing" id="m0P-fS-Nag"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="azP-qu-igE" secondAttribute="trailing" constant="20" id="oJ4-lV-Qk1"/>
+                            <constraint firstItem="eqm-Xp-LeU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="rLg-5s-ki5"/>
+                            <constraint firstItem="yBE-EX-kO0" firstAttribute="top" secondItem="1hQ-rB-fG0" secondAttribute="bottom" constant="72" id="upb-HM-b1b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eqm-Xp-LeU" secondAttribute="trailing" constant="-20" id="wbs-r2-wGS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myAvatar" destination="azP-qu-igE" id="UBX-8T-Hid"/>
+                        <outlet property="opponentAvatar" destination="yBE-EX-kO0" id="VIr-cl-HfH"/>
+                        <outlet property="searchAgain" destination="80M-32-2WK" id="7Be-tQ-o4H"/>
+                        <outlet property="status" destination="1hQ-rB-fG0" id="ArL-1D-hBk"/>
+                        <outlet property="vs" destination="LIv-s9-RI9" id="yjg-Wj-sFW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="396"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avatar-1" width="100" height="100"/>
+        <image name="bg-boxingring" width="320" height="568"/>
+        <image name="empty" width="97" height="105"/>
+    </resources>
+</document>
